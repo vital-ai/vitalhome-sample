@@ -1,0 +1,26 @@
+
+### VITALSIGNS MANAGED START ###
+
+# Ignore protege catalog xml files
+**/catalog-v*.xml
+/vital-config/
+/vital-domain/
+/vital-dynamodb/
+/vital-json/
+/vital-license/
+/vital-lucene/
+/vital-ontology/
+/vital-triplestore/
+/vitalflow-inference/
+/vitalflow-integrator/
+/vitalflow-logger/
+/vitalflow-nlp/
+/vitalflow-predict/
+/vitalhadoop/
+/vitalpredict/
+/vitalprime/
+/vitalservice/
+/vitalsigns/
+/vitalutil/
+
+### VITALSIGNS MANAGED END   ###
