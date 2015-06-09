@@ -46,16 +46,6 @@
     
 
 
-    <!-- http://vital.ai/ontology/twentynews#hasNewsgroup -->
-
-    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/twentynews#hasNewsgroup">
-        <rdfs:comment xml:lang="en">message newsgroup, like: comp.sys.ibm.pc.hardware</rdfs:comment>
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/twentynews#Message"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://vital.ai/ontology/twentynews#hasSubject -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/twentynews#hasSubject">
