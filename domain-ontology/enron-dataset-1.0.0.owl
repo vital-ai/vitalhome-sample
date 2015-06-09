@@ -54,16 +54,6 @@
     
 
 
-    <!-- http://vital.ai/ontology/enron-dataset#hasEmailTimestamp -->
-
-    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/enron-dataset#hasEmailTimestamp">
-        <rdfs:comment xml:lang="en">unparsed email timestamp</rdfs:comment>
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/enron-dataset#EnronEmail"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -72,6 +62,36 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://vital.ai/ontology/enron-dataset#Edge_hasBCCRecipient -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/enron-dataset#Edge_hasBCCRecipient">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/enron-dataset#Edge_hasRecipient"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/enron-dataset#EnronEmail"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/enron-dataset#EnronPerson"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/enron-dataset#Edge_hasCCRecipient -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/enron-dataset#Edge_hasCCRecipient">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/enron-dataset#Edge_hasRecipient"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/enron-dataset#EnronEmail"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/enron-dataset#EnronPerson"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/enron-dataset#Edge_hasDirectRecipient -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/enron-dataset#Edge_hasDirectRecipient">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/enron-dataset#Edge_hasRecipient"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/enron-dataset#EnronEmail"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/enron-dataset#EnronPerson"/>
+    </owl:Class>
     
 
 
