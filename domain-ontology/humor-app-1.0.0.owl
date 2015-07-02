@@ -1,0 +1,217 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY vital-core "http://vital.ai/ontology/vital-core#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://vital.ai/ontology/humor-app#"
+     xml:base="http://vital.ai/ontology/humor-app"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:vital-core="http://vital.ai/ontology/vital-core#">
+    <owl:Ontology rdf:about="http://vital.ai/ontology/humor-app">
+        <vital-core:hasDefaultPackage rdf:datatype="&xsd;string">org.example.humor.app.domain</vital-core:hasDefaultPackage>
+        <owl:versionInfo>1.0.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://vital.ai/ontology/vital"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://vital.ai/ontology/humor-app#hasCardContent -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/humor-app#hasCardContent">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/humor-app#EchoResponse"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/humor-app#hasCardTitle -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/humor-app#hasCardTitle">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/humor-app#EchoResponse"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/humor-app#hasOutputSpeechText -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/humor-app#hasOutputSpeechText">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/humor-app#EchoResponse"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/humor-app#hasReason -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/humor-app#hasReason">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/humor-app#EchoSessionEndedRequest"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/humor-app#hasRepromptOutputSpeechText -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/humor-app#hasRepromptOutputSpeechText">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/humor-app#EchoResponse"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/humor-app#hasSessionId -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/humor-app#hasSessionId">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/humor-app#EchoRequest"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/humor-app#hasSlotType -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/humor-app#hasSlotType">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/humor-app#EchoSlot"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/humor-app#hasUserId -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/humor-app#hasUserId">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/humor-app#EchoRequest"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/humor-app#hasValue -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/humor-app#hasValue">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/humor-app#EchoSlot"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/humor-app#isSessionNew -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/humor-app#isSessionNew">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/humor-app#EchoRequest"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/humor-app#isShouldEndSession -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/humor-app#isShouldEndSession">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/humor-app#EchoResponse"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://vital.ai/ontology/humor-app#EchoIntentRequest -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/humor-app#EchoIntentRequest">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/humor-app#EchoRequest"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/humor-app#EchoLaunchRequest -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/humor-app#EchoLaunchRequest">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/humor-app#EchoRequest"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/humor-app#EchoRequest -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/humor-app#EchoRequest">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/humor-app#EchoResponse -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/humor-app#EchoResponse">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/humor-app#EchoSessionEndedRequest -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/humor-app#EchoSessionEndedRequest">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/humor-app#EchoRequest"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/humor-app#EchoSlot -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/humor-app#EchoSlot">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/humor-app#Edge_hasEchoSlot -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/humor-app#Edge_hasEchoSlot">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_TaxonomyEdge"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/humor-app#EchoIntentRequest"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/humor-app#EchoSlot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/humor-app#Joke -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/humor-app#Joke">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital#Document"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+
