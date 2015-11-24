@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY vital "http://vital.ai/ontology/vital#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY vital-nlp "http://vital.ai/ontology/vital-nlp#" >
+    <!ENTITY vital-core "http://vital.ai/ontology/vital-core#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://vital.ai/ontology/enron-dataset#"
+     xml:base="http://vital.ai/ontology/enron-dataset"
+     xmlns:vital-core="http://vital.ai/ontology/vital-core#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:vital-nlp="http://vital.ai/ontology/vital-nlp#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vital="http://vital.ai/ontology/vital#">
+    <owl:Ontology rdf:about="http://vital.ai/ontology/enron-dataset">
+        <vital-core:hasDefaultPackage rdf:datatype="&xsd;string">org.example.enrondata.domain</vital-core:hasDefaultPackage>
+        <owl:versionInfo>1.0.1</owl:versionInfo>
+        <owl:imports rdf:resource="http://vital.ai/ontology/vital-nlp"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://vital.ai/ontology/enron-dataset#hasEmailAddress -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/enron-dataset#hasEmailAddress">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/enron-dataset#EnronPerson"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/enron-dataset#hasEmailSubject -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/enron-dataset#hasEmailSubject">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/enron-dataset#EnronEmail"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://vital.ai/ontology/enron-dataset#Edge_hasBCCRecipient -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/enron-dataset#Edge_hasBCCRecipient">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/enron-dataset#Edge_hasRecipient"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/enron-dataset#EnronEmail"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/enron-dataset#EnronPerson"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/enron-dataset#Edge_hasCCRecipient -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/enron-dataset#Edge_hasCCRecipient">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/enron-dataset#Edge_hasRecipient"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/enron-dataset#EnronEmail"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/enron-dataset#EnronPerson"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/enron-dataset#Edge_hasDirectRecipient -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/enron-dataset#Edge_hasDirectRecipient">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/enron-dataset#Edge_hasRecipient"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/enron-dataset#EnronEmail"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/enron-dataset#EnronPerson"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/enron-dataset#Edge_hasRecipient -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/enron-dataset#Edge_hasRecipient">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_PeerEdge"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/enron-dataset#EnronEmail"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/enron-dataset#EnronPerson"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/enron-dataset#Edge_hasSender -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/enron-dataset#Edge_hasSender">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_PeerEdge"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/enron-dataset#EnronEmail"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/enron-dataset#EnronPerson"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/enron-dataset#EnronEmail -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/enron-dataset#EnronEmail">
+        <rdfs:subClassOf rdf:resource="&vital-nlp;Document"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/enron-dataset#EnronPerson -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/enron-dataset#EnronPerson">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+
