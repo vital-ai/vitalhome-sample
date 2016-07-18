@@ -1,0 +1,267 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY vital-core "http://vital.ai/ontology/vital-core#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://vital.ai/ontology/whiskies#"
+     xml:base="http://vital.ai/ontology/whiskies"
+     xmlns:vital-core="http://vital.ai/ontology/vital-core#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://vital.ai/ontology/whiskies">
+        <vital-core:hasDefaultPackage rdf:datatype="&xsd;string">org.example.whiskies.domain</vital-core:hasDefaultPackage>
+        <owl:versionInfo>1.0.1</owl:versionInfo>
+        <owl:imports rdf:resource="http://vital.ai/ontology/vital"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://vital.ai/ontology/whiskies#hasWhiskyURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/whiskies#hasWhiskyURI">
+        <rdfs:range rdf:resource="http://vital.ai/ontology/whiskies#Whisky"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/whiskies#WhiskyPreferenceFact"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/whiskies#WhiskyRecommendedFact"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://vital.ai/ontology/whiskies#hasBody -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/whiskies#hasBody">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/whiskies#Whisky"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/whiskies#hasClusterDistance -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/whiskies#hasClusterDistance">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/whiskies#Whisky"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/whiskies#hasClusterID -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/whiskies#hasClusterID">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/whiskies#Whisky"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/whiskies#hasFloral -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/whiskies#hasFloral">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/whiskies#Whisky"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/whiskies#hasFruity -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/whiskies#hasFruity">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/whiskies#Whisky"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/whiskies#hasHoney -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/whiskies#hasHoney">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/whiskies#Whisky"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/whiskies#hasLatitude -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/whiskies#hasLatitude">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/whiskies#Whisky"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/whiskies#hasLongitude -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/whiskies#hasLongitude">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/whiskies#Whisky"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/whiskies#hasMalty -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/whiskies#hasMalty">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/whiskies#Whisky"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/whiskies#hasMedicinal -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/whiskies#hasMedicinal">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/whiskies#Whisky"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/whiskies#hasNutty -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/whiskies#hasNutty">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/whiskies#Whisky"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/whiskies#hasPostcode -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/whiskies#hasPostcode">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/whiskies#Whisky"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/whiskies#hasSmoky -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/whiskies#hasSmoky">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/whiskies#Whisky"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/whiskies#hasSpicy -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/whiskies#hasSpicy">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/whiskies#Whisky"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/whiskies#hasSweetness -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/whiskies#hasSweetness">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/whiskies#Whisky"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/whiskies#hasTobacco -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/whiskies#hasTobacco">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/whiskies#Whisky"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/whiskies#hasWiney -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/whiskies#hasWiney">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/whiskies#Whisky"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/whiskies#isLiked -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/whiskies#isLiked">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/whiskies#WhiskyPreferenceFact"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://vital.ai/ontology/whiskies#Whisky -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/whiskies#Whisky">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/whiskies#WhiskyPreferenceFact -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/whiskies#WhiskyPreferenceFact">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital#VITAL_Fact"/>
+        <rdfs:comment xml:lang="en">remebers user whisky preference (liked or not)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/whiskies#WhiskyRecommendedFact -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/whiskies#WhiskyRecommendedFact">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital#VITAL_Fact"/>
+        <rdfs:comment xml:lang="en">a fact that&apos;s created for each whiskey that appeared in recommendations</rdfs:comment>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+
