@@ -21,19 +21,12 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="http://vital.ai/ontology/twentynews">
         <vital-core:hasDefaultPackage rdf:datatype="&xsd;string">org.example.twentynews.domain</vital-core:hasDefaultPackage>
+        <vital-core:hasDefaultArtifactId rdf:datatype="&xsd;string">twentynews</vital-core:hasDefaultArtifactId>
+        <vital-core:hasDefaultGroupId rdf:datatype="&xsd;string">vital-ai</vital-core:hasDefaultGroupId>
         <owl:versionInfo>1.0.1</owl:versionInfo>
         <owl:imports rdf:resource="http://vital.ai/ontology/vital-nlp"/>
     </owl:Ontology>
     
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
 
 
     <!-- 
@@ -81,7 +74,7 @@
     <!-- http://vital.ai/ontology/twentynews#Message -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/twentynews#Message">
-        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-nlp#Document"/>
+        <rdfs:subClassOf rdf:resource="&vital-nlp;Document"/>
         <rdfs:comment xml:lang="en">represents a twentynews group message</rdfs:comment>
     </owl:Class>
     

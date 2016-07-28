@@ -19,6 +19,8 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="http://vital.ai/ontology/whiskies">
         <vital-core:hasDefaultPackage rdf:datatype="&xsd;string">org.example.whiskies.domain</vital-core:hasDefaultPackage>
+        <vital-core:hasDefaultGroupId rdf:datatype="&xsd;string">vital-ai</vital-core:hasDefaultGroupId>
+        <vital-core:hasDefaultArtifactId rdf:datatype="&xsd;string">whiskies</vital-core:hasDefaultArtifactId>
         <owl:versionInfo>1.0.1</owl:versionInfo>
         <owl:imports rdf:resource="http://vital.ai/ontology/vital"/>
     </owl:Ontology>

@@ -12,13 +12,15 @@
 
 <rdf:RDF xmlns="http://vital.ai/ontology/movielens#"
      xml:base="http://vital.ai/ontology/movielens"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vital-core="http://vital.ai/ontology/vital-core#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:vital-core="http://vital.ai/ontology/vital-core#">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="http://vital.ai/ontology/movielens">
+        <vital-core:hasDefaultArtifactId rdf:datatype="&xsd;string">movielens</vital-core:hasDefaultArtifactId>
         <vital-core:hasDefaultPackage rdf:datatype="&xsd;string">org.movielens.domain</vital-core:hasDefaultPackage>
+        <vital-core:hasDefaultGroupId rdf:datatype="&xsd;string">vital-ai</vital-core:hasDefaultGroupId>
         <owl:versionInfo>1.0.0</owl:versionInfo>
         <owl:imports rdf:resource="http://vital.ai/ontology/vital"/>
     </owl:Ontology>

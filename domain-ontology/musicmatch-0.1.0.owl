@@ -18,6 +18,8 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="http://vitalai.com/ontology/musicmatch">
+        <vital-core:hasDefaultArtifactId rdf:datatype="&xsd;string">musicmatch</vital-core:hasDefaultArtifactId>
+        <vital-core:hasDefaultGroupId rdf:datatype="&xsd;string">vitalai-com</vital-core:hasDefaultGroupId>
         <owl:versionInfo>0.1.0</owl:versionInfo>
         <vital-core:hasDefaultPackage>com.vitalai.musicmatch.domain</vital-core:hasDefaultPackage>
         <owl:imports rdf:resource="http://vital.ai/ontology/vital"/>
